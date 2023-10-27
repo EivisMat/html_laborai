@@ -1,0 +1,17 @@
+{
+	"HTML basic": {
+		"prefix": "html-structure",
+		"body": [
+			"<!-- Eivinas Matačinskas, EDIf-22 -->"
+            "<!DOCTYPE html>"
+            "<html>"
+                "<head>"
+                    "<title></title>"
+                "</head>"
+                "<body>"
+                "</body>"
+            "</html>"
+		],
+		"description": "Inserts basic HTML doc structure"
+	}
+}
