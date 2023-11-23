@@ -1,0 +1,33 @@
+/* Print Styles */
+@media print {
+    body {
+        font-family: serif;
+    }
+
+    #sidebar {
+        display: none;
+    }
+
+    #content {
+        width: 100%;
+        flex: 1;
+    }
+
+    /* Ensure images and paragraphs are displayed one after another on the left side */
+    img {
+        display: block;
+        align-self: left;
+    }
+
+    p {
+        text-align: left;
+        margin: 0; /* Remove default paragraph margins */
+    }
+
+    section {
+        page-break-inside: avoid; /* Avoid breaking sections across pages */
+        text-align: left;
+    }
+
+    /* Add other print-specific styles as needed */
+}
