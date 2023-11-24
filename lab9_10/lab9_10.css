@@ -1,6 +1,5 @@
     /* Sidebar Styles */
     #sidebar {
-        width: 17%;
         min-width: fit-content;
         height: 100vh;
         background-color: #040B14;
@@ -68,12 +67,19 @@
     }
 
     /* About Styles */
+
+    #about-image { grid-area: about-image }
+    #about-text { grid-area: about-text }
+    #facts { grid-area: facts }
+    #skills { grid-area: skills }
     #about-wrapper {
-        display: flex;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-areas: 'about-image about-text' 'facts facts' 'skills skills'
     }
 
     #about, #resume, #contact {
-        margin: 20px 0px 0px 270px;
+        margin: 20px 150px 0px 400px;
         display: block;
         text-wrap: wrap;
     }
@@ -103,20 +109,120 @@
         height: 400px;
     }
 
+    #facts p {
+        font-size: 20px;
+    }
+
+    #clients { 
+        grid-area: clients;
+        display: flex;
+        flex-direction: row;
+    }
+    #projects { 
+        grid-area: projects; 
+        display: flex;
+        flex-direction: row;
+    }
+    #hours { 
+        grid-area: hours; 
+        display: flex;
+        flex-direction: row; 
+    }
+    #workers { 
+        grid-area: workers; 
+        display: flex;
+        flex-direction: row; 
+    }
+
+    #stats {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-template-areas: 'clients projects hours workers';
+    }
+
+    .name-skill{ 
+        grid-area: name-skill;
+        text-align: left;
+    }
+    .val{ 
+        grid-area: val;
+        text-align: right;
+    }
+    .bar{ grid-area: bar }
+
+    .name-skill, .val {
+        font-family: 'Poppins', sans-serif;
+        font-size: 15px;
+    }
+
+    #htm{ 
+        grid-area: html;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: 'name-skill val' 'bar bar';
+    }
+    #cs{ 
+        grid-area: css; 
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: 'name val' 'bar bar';
+    }
+    #js{ 
+        grid-area: js;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: 'name val' 'bar bar';
+    }
+    #python{ 
+        grid-area: python;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: 'name val' 'bar bar'; 
+    }
+    #cpp { 
+        grid-area: cpp;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: 'name val' 'bar bar';
+    } 
+    #blank { 
+        grid-area: blank;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: 'name val' 'bar bar'; }
+    
+    #skills-wrapper{
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-areas: 'html python' 'css cpp' 'js blank';
+        column-gap: 40px;
+        row-gap: 15px;
+    }
+
+    #skills {
+        background-color: beige;
+        padding-top: 5px;
+        padding-bottom: 10px;
+    }
+
     /* Resume Styles */
     #resume-wrapper {
         display: grid;
         grid-template-columns: auto auto;
-        grid-template-areas: 'summary experience' 'education experience';
+        grid-template-areas: 'summary experience' 'education experience' 'facts facts' 'skills skills';
     }
 
     #summary { grid-area: summary }
     #experience { grid-area: experience }
     #education { grid-area: education }
+    #facts { grid-area: facts }
+    #skills { grid-area: skills }
 
     #summary ul {
         line-height: 40px;
     }
+    
+    
 
     /* Contact Styles */
     #contact-wrapper {
@@ -214,4 +320,12 @@
         border: 0px;
         background-color: #E4EDF9;
         font-family: 'Raleway', sans-serif;
+    }
+
+    #sidebar{ grid-area: sidebar }
+    #content{ grid-area: content }
+    #wrapper {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-areas: 'sidebar content';
     }
