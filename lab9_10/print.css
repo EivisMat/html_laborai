@@ -1,7 +1,15 @@
-/* Print Styles */
 @media print {
     body {
         font-family: serif;
+    }
+
+    #about, #resume, #contact {
+        margin: 0px 0px 0px 0px;
+        text-align: left;
+    }
+
+    #contact {
+        display: none;
     }
 
     #sidebar {
@@ -13,7 +21,6 @@
         flex: 1;
     }
 
-    /* Ensure images and paragraphs are displayed one after another on the left side */
     img {
         display: block;
         align-self: left;
@@ -21,13 +28,11 @@
 
     p {
         text-align: left;
-        margin: 0; /* Remove default paragraph margins */
+        margin: 0;
     }
 
     section {
-        page-break-inside: avoid; /* Avoid breaking sections across pages */
+        page-break-inside: avoid;
         text-align: left;
     }
-
-    /* Add other print-specific styles as needed */
 }
