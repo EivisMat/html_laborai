@@ -3,6 +3,7 @@
 <html>
     <head>
         <title>Porfolio</title>
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
         <link rel="stylesheet" href="lab9_10.css">
         <link rel="stylesheet" href="print.css" media="print">
         <meta charset="UTF-8">
@@ -10,9 +11,26 @@
     <body>
         <section id="wrapper">
             <section id="sidebar">
-                <img src="profile-picture.jpg">
+                <img id="profile-pic" src="assets/profile-picture.jpg">
                 <h3>Eivinas Matačinskas</h3>
-                <ul>
+                <section id="socials-wrapper">
+                    <section class="social-item">
+                        <a href="https://www.twitter.com" target="_blank"><img src="assets/twitter.png"></a>
+                    </section>
+                    <section class="social-item">
+                        <a href="https://www.facebook.com" target="_blank"><img src="assets/facebook.png"></a>
+                    </section>
+                    <section class="social-item">
+                        <a href="https://www.instagram.com" target="_blank"><img src="assets/instagram.png"></a>
+                    </section>
+                    <section class="social-item">
+                        <a href="https://www.skype.com" target="_blank"><img src="assets/skype.png"></a>
+                    </section>
+                    <section class="social-item">
+                        <a href="https://www.linkedin.com" target="_blank"><img src="assets/linkedin.png"></a>
+                    </section>
+                </section>
+                <ul id="navbar-links">
                     <li><a href="#home">Pagrindinis</a></li>
                     <li><a href="#about">Apie</a></li>
                     <li><a href="#resume">Reziumė</a></li>
@@ -28,13 +46,14 @@
                 </section>
                 <section id="about">
                     <h2>Apie</h2>
+                    <section class="decorative-bar"></section>
                     <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
                     <section id="about-wrapper">
                         <section id="about-image">
-                            <img src="profile-picture.jpg">
+                            <img src="assets/profile-picture.jpg">
                         </section>
                         <section id="about-text">
-                            <h2>Vartotojo sąsajos ir patirties dizaineris ir programuotojas</h2>
+                            <h2>Studentas, programuotojas. </h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                             <section id="bullet-wrapper">
                                 <section id="bullet-1">
@@ -58,138 +77,192 @@
                         </section>
                         <section id="facts">
                             <h3>Faktai</h3>
+                            <section class="decorative-bar"></section>
                             <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-                            <!-- cba to do atm, do later -->
                             <section id="stats">
-                                <section id="clients">
-                                    <section class="item1">
-                                        some image
-                                    </section>
-                                    <section class="item2">
-                                        some text
-                                    </section>
-                                </section>
-                                <section id="projects">
-                                    <section class="item1">
-
-                                    </section>
-                                    <section class="item2">
-                                        
+                                <section class="stats-item" id="clients">
+                                    <section class="stats-item-wrapper" id="clients-wrapper">
+                                        <section class="stats-image">
+                                            <img src="assets/clients.png" style="width:56px;height:56px">
+                                        </section>
+                                        <section class="stats-text">
+                                            <h1>0</h1>
+                                            <p style="font-size: 15px"><b>Laimingų klientų</b> aptarnautų</p>
+                                        </section>
                                     </section>
                                 </section>
-                                <section id="hours">
-                                    <section class="item1">
-
-                                    </section>
-                                    <section class="item2">
-                                        
+                                <section class="stats-item" id="projects">
+                                    <section class="stats-item-wrapper" id="projects-wrapper">
+                                        <section class="stats-image">
+                                            <img src="assets/projects.png" style="width:56px;height:56px">
+                                        </section>
+                                        <section class="stats-text">
+                                            <h1>1</h1>
+                                            <p style="font-size: 15px"><b>Projektas</b> atliktas</p>
+                                        </section>
                                     </section>
                                 </section>
-                                <section id="workers">
-                                    <section class="item1">
-
+                                <section class="stats-item" id="hours">
+                                    <section class="stats-item-wrapper" id="hours-wrapper">
+                                        <section class="stats-image">
+                                            <img src="assets/hours.png" style="width:56px;height:56px">
+                                        </section>
+                                        <section class="stats-text">
+                                            <h1>76</h1>
+                                            <p style="font-size: 15px"><b>Valandų darbo</b> praleistų prie projektų</p>
+                                        </section>
                                     </section>
-                                    <section class="item2">
-                                        
+                                </section>
+                                <section class="stats-item" id="workers">
+                                    <section class="stats-item-wrapper" id="workers-wrapper">
+                                        <section class="stats-image">
+                                            <img src="assets/workers.png" style="width:56px;height:56px">
+                                        </section>
+                                        <section class="stats-text">
+                                            <h1>2</h1>
+                                            <p style="font-size: 15px"><b>GitHub</b> saugyklų sukurtų</p>
+                                        </section>
                                     </section>
                                 </section>
                             </section>
                         </section>
                         <section id="skills">
                             <h3>Įgūdžiai</h3>
+                            <section class="decorative-bar"></section>
                             <section id="skills-wrapper">
-                                <section id="htm">
+                                <section class="skill-item" id="htm">
                                     <section class="name">HTML</section>
                                     <section class="val">65%</section>
-                                    <section class="bar">AAAAAAAAAAAAA</section>
+                                    <section class="bar">
+                                        <svg width="100%" height="10px">
+                                            <rect width="100%" height="10" style="fill:#DCE8F8"/>
+                                            <rect width="65%" height="10" style="fill:#3498db"/>
+                                        </svg>
+                                    </section>
                                 </section>
-                                <section id="cs">
+                                <section class="skill-item" id="cs">
                                     <section class="name">CSS</section>
                                     <section class="val">45%</section>
-                                    <section class="bar">AAAAAAAAAAAAAA</section>
+                                    <section class="bar">
+                                        <svg width="100%" height="10px">
+                                            <rect width="100%" height="10" style="fill:#DCE8F8"/>
+                                            <rect width="45%" height="10" style="fill:#3498db"/>
+                                        </svg>
+                                    </section>
                                 </section>
-                                <section id="js">
+                                <section class="skill-item" id="js">
                                     <section class="name">JavaScript</section>
-                                    <section class="val">5%</section>
-                                    <section class="bar">AAAAAAAAAAAAAA</section>
+                                    <section class="val">15%</section>
+                                    <section class="bar">
+                                        <svg width="100%" height="10px">
+                                            <rect width="100%" height="10" style="fill:#DCE8F8"/>
+                                            <rect width="15%" height="10" style="fill:#3498db"/>
+                                        </svg>
+                                    </section>
                                 </section>
-                                <section id="python">
+                                <section class="skill-item" id="python">
                                     <section class="name">Python</section>
                                     <section class="val">77%</section>
-                                    <section class="bar">AAAAAAAAAAAAAAAAAAAAA</section>
+                                    <section class="bar">
+                                        <svg width="100%" height="10px">
+                                            <rect width="100%" height="10" style="fill:#DCE8F8"/>
+                                            <rect width="77%" height="10" style="fill:#3498db"/>
+                                        </svg>
+                                    </section>
                                 </section>
-                                <section id="cpp">
+                                <section class="skill-item" id="cpp">
                                     <section class="name">C++</section>
                                     <section class="val">80%</section>
-                                    <section class="bar">AAAAAAAAA</section>
+                                    <section class="bar">
+                                        <svg width="100%" height="10px">
+                                            <rect width="100%" height="10" style="fill:#DCE8F8"/>
+                                            <rect width="80%" height="10" style="fill:#3498db"/>
+                                        </svg>
+                                    </section>
                                 </section>
-                                <section id="blank"></section>
+                                <section class="skill-item" id="blank"></section>
                             </section>
                         </section>
                     </section>
                 </section>
                 <section id="resume">
                     <h2>Reziumė</h2>
+                    <section class="decorative-bar"></section>
+                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
                     <section id="resume-wrapper">
                         <section id="summary">
-                            <h3>Apibendrinimas</h3>
-                            <h4>Eivinas Matačinskas</h4>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium eveniet facere modi dicta ipsa veniam explicabo eos voluptas provident ipsam consequatur atque, veritatis repellendus distinctio sint fugit sunt eaque similique.
-                                <ul>
-                                    <li>Portland par 127, Orlando, FL</li>
-                                    <li>(123) 456-7891</li>
-                                    <li>name@example.com</li>
-                                </ul>
-                            </p>
+                            <section class="vertical-bar">
+                                <svg width="16" height="100%">
+                                    <rect x="8" width="2" height="95%"/>
+                                </svg>
+                            </section>
+                            <section id="summary-text">
+                                <h3>Apibendrinimas</h3>
+                                <h4>Eivinas Matačinskas</h4>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium eveniet facere modi dicta ipsa veniam explicabo eos voluptas provident ipsam consequatur atque, veritatis repellendus distinctio sint fugit sunt eaque similique.
+                                    <ul>
+                                        <li>Portland par 127, Orlando, FL</li>
+                                        <li>(123) 456-7891</li>
+                                        <li>name@example.com</li>
+                                    </ul>
+                                </p>
+                            </section>
                         </section>
                         <section id="experience">
-                            <h3>Darbo patirtis</h3>
-                            <h4>UI/UX Dizaineris</h4>
-                            <section class="time-frame">
-                                <fieldset>2022 - Dabar</fieldset>
+                            <section class="vertical-bar">
+                                <svg width="16" height="100%">
+                                    <rect x="8" width="2" height="95%"/>
+                                </svg>
                             </section>
-                            <p>
-                                <i>Creative Design Studios</i>
-                                <ul>
-                                    <li>Vadovavau UI/UX dizaino procesui keliems projektams nuo koncepcijos iki įgyvendinimo, rezultatu buvo 30% vartotojų pasitenkinimo padidėjimas.</li>    
-                                    <li>Sustabdžiau bendradarbiavimą su produkto vadovais ir kūrėjais siekiant sukurti maketus, prototipus ir aukštos kokybės dizainus.</li>
-                                    <li>Atlikau vartotojų tyrimus ir naudotojo sąsajos testavimus, siekdamas gauti atsiliepimus dėl iteratyvių dizaino tobulinimų.</li>
-                                    <li>Įdiegiau dizaino sistemą, užtikrinant nuoseklumą ir efektyvumą skirtinguose projektuose.</li>
-                                </ul>
-                            </p>
-                            <h4>Front-End Tinklalapių Kūrėjas</h4>
-                            <section class="time-frame">
-                                <fieldset>2020 - 2021</fieldset>
+                            <section id="experience-text">
+                                <h3>Projektai</h3>
+                                <h4>Šachmatai</h4>
+                                <section class="time-frame">
+                                    <fieldset>2023</fieldset>
+                                </section>
+                                <p>
+                                    Originaliai pradėtas kaip kursinis darbas, šio projekto tikslas buvo sukurti virtualią šachmatų lentą naudojantis C++ programavimo kalba ir
+                                    SDL2 <i>(Simple DirectMedia Layer)</i> biblioteka. Buvo siekiama sukurti vizualiai patrauklią bei funkcionalią virtualią šachmatų lentą,
+                                    demonstruojant įgūdžius C++ kalboje bei objektinio programavimo principus.
+                                    <br><br>
+                                    Pagrindiniai bruožai:
+                                    <ul>
+                                        <li>Grafinė naudotojo sąsaja (GUI): Įgyvendinta naudotojo sąsaja su SDL2, suteikianti išvaizdą žaidimui;</li>
+                                        <li>Šachmatų logika: Sukurta pagrindinė žaidimo logika, valdanti ir tikranti leistinus ėjimus, bei ypatingas taisykles kaip <i>en passant</i>,
+                                        <i>castling</i>;</li>
+                                        <li>Figūrų atvaizdavimas: Naudojantis objektinio programavimo principu, buvo sukurtos klasės kiekvienai figūrai atvaizduoti ir apdoroti žaidime.</li>
+                                    </ul>
+                                </p>
                             </section>
-                            <p>
-                                <i>Digital Solutions Agency</i>
-                                <ul>
-                                    <li>Kuravau atsakingas ir vartotojiškas interneto sąsajas, naudodamas HTML, CSS ir „JavaScript“ karkasus, tokius kaip „React“.</li>
-                                    <li>Bendradarbiaujant su UX dizaineriais, įgyvendinau dizaino koncepcijas ir užtikrinau sklandžius vartotojų sąveikos būdus.</li>
-                                    <li>Optimizavau svetainės veikimą perprogramavęs kodą ir įdiegęs geriausias praktikas.</li>
-                                </ul>
-                            </p>
                         </section>
                         <section id="education">
-                            <h3>Išsilavinimas</h3>
-                            <h4>Informatikos mokslų bakalauras</h4>
-                            <section class="time-frame">
-                                <fieldset>2022 - 2026</fieldset>
+                            <section class="vertical-bar">
+                                <svg width="16" height="100%">
+                                    <rect x="8" width="2" height="95%"/>
+                                </svg>
                             </section>
-                            <p>
-                                <i>Vilnius Tech, Vilnius</i>
-                                <ul>
-                                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-                                    <li>Ut atque tenetur neque porro sequi consequatur facilis temporibus, eos necessitatibus ipsam omnis accusantium?</li>
-                                    <li> Doloribus fuga blanditiis pariatur recusandae velit ipsa fugiat.</li>
-                                </ul>
-                            </p>
+                            <section id="education-text">
+                                <h3>Išsilavinimas</h3>
+                                <h4>Informatikos mokslų bakalauras</h4>
+                                <section class="time-frame">
+                                    <fieldset>2022 - 2026</fieldset>
+                                </section>
+                                <p>
+                                    <i>Vilnius Tech, Vilnius</i>
+                                    <ul>
+                                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                                        <li>Ut atque tenetur neque porro sequi consequatur facilis temporibus, eos necessitatibus ipsam omnis accusantium?</li>
+                                        <li> Doloribus fuga blanditiis pariatur recusandae velit ipsa fugiat.</li>
+                                    </ul>
+                                </p>
+                            </section>
                         </section>
                     </section>
                 </section>
                 <section id="contact">
                     <h2>Susisiekti su manimi</h2>
+                    <section class="decorative-bar"></section>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, tempora odio! Repudiandae deserunt est nostrum aliquid quo reiciendis, tempora aperiam, facilis obcaecati deleniti aliquam et quis placeat harum, minus animi!
                     </p>

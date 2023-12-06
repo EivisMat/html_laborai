@@ -1,7 +1,7 @@
     /* Sidebar Styles */
     #sidebar {
         min-width: fit-content;
-        height: 100vh;
+        height: device-height;
         background-color: #040B14;
         color: #fff;
         padding: 20px;
@@ -32,7 +32,7 @@
         color: #37B3ED;
     }
 
-    #sidebar img {
+    #sidebar #profile-pic {
         width: 100px;
         height: 100px;
         border: 8px solid #2C2F3F;
@@ -41,6 +41,25 @@
         display: block;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    #socials-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 5px;
+    }
+    .social-item a img {
+        width: 15px;
+        padding: 7px;
+        border-radius: 20px;
+        background-color: #212431;
+        transition: background-color 0.5s ease;
+        cursor: pointer;
+    }
+
+    .social-item a img:hover {
+        background-color: #149DDD;
     }
 
     /* Home Styles */
@@ -66,6 +85,8 @@
         line-height: 0px;
     }
 
+    
+
     /* About Styles */
 
     #about-image { grid-area: about-image }
@@ -79,7 +100,7 @@
     }
 
     #about, #resume, #contact {
-        margin: 20px 150px 0px 400px;
+        margin: 20px 150px 0px 20px;
         display: block;
         text-wrap: wrap;
     }
@@ -97,6 +118,7 @@
     #bullet-1 ul,
     #bullet-2 ul {
         list-style-type: "> ";
+        font-size: 20px;
     }
 
     #about p {
@@ -116,22 +138,22 @@
     #clients { 
         grid-area: clients;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
     }
     #projects { 
         grid-area: projects; 
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
     }
     #hours { 
         grid-area: hours; 
         display: flex;
-        flex-direction: row; 
+        flex-direction: column; 
     }
     #workers { 
         grid-area: workers; 
         display: flex;
-        flex-direction: row; 
+        flex-direction: column; 
     }
 
     #stats {
@@ -140,9 +162,46 @@
         grid-template-areas: 'clients projects hours workers';
     }
 
-    .name-skill{ 
-        grid-area: name-skill;
+    .stats-image { 
+        display: flex;
+        grid-area: stats-image;
+        justify-content: right;
+    }
+
+    .stats-text { 
+        grid-area: stats-text;
+        /* font-size: 40px; */
+        font-family: 'Open Sans' sans-serif;
+        /* font-weight: 700; */
+    }
+    
+    .stats-text h1 {
+        font-size: 40px;
+        font-weight: 700;
+        margin: 0;
+    }
+
+    .stats-text p {
+        margin: 0;
+        font-size: 10px;
+    }
+
+    .stats-item-wrapper {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-areas: 'stats-image stats-text';
+        column-gap: 20px;
+        row-gap: 0px;
+        max-width: 70%;
+    }
+
+    .name{ 
+        grid-area: name;
         text-align: left;
+        font-size: 14px;
+        font-family: 'Poppins', sans-serif;
+        color: #050d18;
+        font-weight: 600;
     }
     .val{ 
         grid-area: val;
@@ -155,74 +214,79 @@
         font-size: 15px;
     }
 
-    #htm{ 
-        grid-area: html;
-        display: grid;
-        grid-template-columns: 50% 50%;
-        grid-template-areas: 'name-skill val' 'bar bar';
-    }
-    #cs{ 
-        grid-area: css; 
+
+    .skill-item {
         display: grid;
         grid-template-columns: 50% 50%;
         grid-template-areas: 'name val' 'bar bar';
+        row-gap: 8px;
     }
-    #js{ 
-        grid-area: js;
-        display: grid;
-        grid-template-columns: 50% 50%;
-        grid-template-areas: 'name val' 'bar bar';
-    }
-    #python{ 
-        grid-area: python;
-        display: grid;
-        grid-template-columns: 50% 50%;
-        grid-template-areas: 'name val' 'bar bar'; 
-    }
-    #cpp { 
-        grid-area: cpp;
-        display: grid;
-        grid-template-columns: 50% 50%;
-        grid-template-areas: 'name val' 'bar bar';
-    } 
-    #blank { 
-        grid-area: blank;
-        display: grid;
-        grid-template-columns: 50% 50%;
-        grid-template-areas: 'name val' 'bar bar'; }
+    #htm{ grid-area: html }
+    #cs{ grid-area: css }
+    #js{ grid-area: js }
+    #python{ grid-area: python }
+    #cpp { grid-area: cpp } 
+    #blank { grid-area: blank }
     
     #skills-wrapper{
         display: grid;
         grid-template-columns: auto auto;
         grid-template-areas: 'html python' 'css cpp' 'js blank';
         column-gap: 40px;
-        row-gap: 15px;
-    }
-
-    #skills {
-        background-color: beige;
-        padding-top: 5px;
-        padding-bottom: 10px;
+        row-gap: 40px;
     }
 
     /* Resume Styles */
     #resume-wrapper {
         display: grid;
-        grid-template-columns: auto auto;
-        grid-template-areas: 'summary experience' 'education experience' 'facts facts' 'skills skills';
+        grid-template-columns: 50% 50%;
+        grid-template-areas: 'summary experience' 'education experience';
     }
 
-    #summary { grid-area: summary }
-    #experience { grid-area: experience }
-    #education { grid-area: education }
-    #facts { grid-area: facts }
-    #skills { grid-area: skills }
+    .vertical-bar > svg > * {
+        stroke:#1F5297;
+        fill:#1F5297;
+    }
+    
+    .vertical-bar > svg > circle {
+        stroke-width: 2;
+        fill: none;
+    }
+
+    #summary-text{grid-area:summary-text}
+    #experience-text{grid-area:experience-text}
+    #education-text{grid-area:education-text}
+
+    #summary { 
+        grid-area: summary;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-areas: 'vertbar summary-text';
+        column-gap: 15px;
+    }
+    #experience { 
+        grid-area: experience;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-areas: 'vertbar experience-text';
+        column-gap: 15px;
+        justify-content: left;
+    }
+    #education { 
+        grid-area: education;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-areas: 'vertbar education-text';
+        column-gap: 15px;
+    }
 
     #summary ul {
         line-height: 40px;
     }
     
-    
+    #experience-text li {
+        margin-bottom: 20px;
+    }
 
     /* Contact Styles */
     #contact-wrapper {
@@ -298,14 +362,19 @@
     body {
         margin: 0;
         font-family: "Open Sans", sans-serif;
+        margin-left: 10px;
     }
 
     h2 {
         font-size: 35px;
+        color: navy;
+        margin-bottom: 0;
     }
 
     #content h3 {
         font-size: 25px;
+        color: navy;
+        margin-bottom: 0;
     }
 
     #content h4 {
@@ -326,6 +395,19 @@
     #content{ grid-area: content }
     #wrapper {
         display: grid;
-        grid-template-columns: auto auto;
+        grid-template-columns: 202.1px auto;
         grid-template-areas: 'sidebar content';
+    }
+
+    .decorative-bar {
+        height: 3px;
+        background-color: #119dcc;
+        width: 5%;
+        margin-bottom: 40px;
+        margin-top: 20px;
+    }
+
+    .bar {
+        display: flex;
+        align-items: center;
     }
