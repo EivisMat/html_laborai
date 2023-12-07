@@ -4,9 +4,10 @@
     <head>
         <title>Porfolio</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="lab9_10.css">
+        <link rel="stylesheet" href="lab9_10_11.css">
         <link rel="stylesheet" href="print.css" media="print">
         <meta charset="UTF-8">
+        <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
     </head>
     <body>
         <section id="wrapper">
@@ -35,6 +36,7 @@
                     <li><a href="#about">Apie</a></li>
                     <li><a href="#resume">Reziumė</a></li>
                     <li><a href="#contact">Susisiekti</a></li>
+                    <li><a href="#lab11">Lab 11</a></li>
                 </ul>
             </section>
             <section id="content">
@@ -304,6 +306,84 @@
                                     </section>
                                 </form>
                             </fieldset>
+                        </section>
+                    </section>
+                </section>
+                <section id="lab11">
+                    <h2>Vienuoliktas laboratorinis darbas</h2>
+                    <section class="decorative-bar"></section>
+                    <section id="lab11-wrapper">
+                        <section id="math" display="block" style="font-size: 30px;line-height:30px">
+                            <math>
+                                <mrow>
+                                    <mi>&Gamma;(z)</mi>
+                                    <mo>=</mo>
+                                    <munderover>
+                                        <mo>&Integral;</mo>
+                                        <mn>0</mn>
+                                        <mn>&infin;</mn>
+                                    </munderover>
+                                    <msup>
+                                        <mi>t</mi>
+                                        <mi>z-1</mi>
+                                    </msup>
+                                    <msup>
+                                        <mi>e</mi>
+                                        <mi>-t</mi>
+                                    </msup>
+                                    <mo>dt</mo>
+                                    <mo>=</mo>
+                                    <mfrac>
+                                        <mi>
+                                            <msup>
+                                                <mi>e</mi>
+                                                <mi>-&gamma;z</mi>
+                                            </msup>
+                                        </mi>
+                                        <mi>z</mi>
+                                    </mfrac>
+                                    <mrow>
+                                        <munderover>
+                                            <mo largeop="true">&Product;</mo>
+                                            <mi>
+                                                <mo>k</mo>
+                                                <mo>=</mo>
+                                                <mo>1</mo>
+                                            </mi>
+                                            <mn>&infin;</mn>
+                                        </munderover>
+                                        <msup>
+                                            <mi>
+                                                <mo>(</mo>
+                                                <mo>1</mo>
+                                                <mo>+</mo>
+                                                <mfrac>
+                                                    <mi>z</mi>
+                                                    <mi>k</mi>
+                                                </mfrac>
+                                                <mo>)</mo>
+                                            </mi>
+                                            <mi>-1</mi>
+                                        </msup>
+                                        <msup>
+                                            <mi>e</mi>
+                                            <mi>
+                                                <mo>z</mo>
+                                                <mo>/</mo>
+                                                <mo>k</mo>
+                                            </mi>
+                                        </msup>
+                                    </mrow>
+                                </mrow>
+                            </math>
+                        </section>
+                        <section id="svgdrawing">
+                            <svg width="100px" height="100px">
+                                <ellipse cx="50" cy="50" rx="20" ry="30" fill="none" stroke="black" stroke-width="5"/>
+                                <line x1="20" y1="50" x2="80" y2="50" stroke="black" stroke-width="5"/>
+                                <line x1="50" y1="80" x2="50" y2="100" stroke="black" stroke-width="5"/>
+                                <line x1="40" y1="98" x2="60" y2="98" stroke="black" stroke-width="5"/>
+                            </svg>
                         </section>
                     </section>
                 </section>

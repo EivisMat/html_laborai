@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lab 12</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="lab12.css">
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div id="main">
+            <h1>Forma</h1>
+            <fieldset>
+                <h2>Įvesti duomenis:</h2>
+                <form onsubmit="handleFormData();return false">
+                    <div>
+                        <label id="name">Vardas:</label><br>
+                        <input type="text" id="name-input" placeholder="Jonas" required>
+                    </div>
+                    <div>
+                        <label id="surname">Pavardė:</label><br>
+                        <input type="text" id="surname-input" placeholder="Petraitis" required>
+                    </div>
+                    <div>
+                        <label id="code">Studento kodas:</label><br>
+                        <input type="text" id="code-input" placeholder="12345678" required>
+                    </div>
+                    <div>
+                        <label id="marks">Studento pažymiai:</label><br>
+                        <input type="number" class="marks-input" required>
+                        <input type="number" class="marks-input" required>
+                        <input type="number" class="marks-input" required>
+                        <input type="number" class="marks-input" required>
+                        <input type="number" class="marks-input" required>
+                    </div>
+                    <div>
+                        <button type="submit">Įvesti</button>
+                    </div>
+                </form>
+            </fieldset>
+            <div>
+                <h1>Studentas</h1>
+                <div id="name-display">Studento vardas: -</div>
+                <div id="surname-display">Studento pavardė: -</div>
+                <div id="code-display">Studento kodas: -</div>
+                <div id="marks-display">Studento pažymiai: -</div>
+                <div id="best-mark">Geriausias pažymys: -</div>
+                <div id="worst-mark">Blogiausias pažymys: -</div>
+            </div>
+        </div>
+    </body>
+    <script src="lab12.js"></script>
+</html>
