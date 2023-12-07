@@ -3,22 +3,17 @@
         font-family: serif;
     }
 
-    #about, #resume, #contact {
-        margin: 0px 0px 0px 0px;
-        text-align: left;
-    }
-
-    #contact {
-        display: none;
-    }
-
-    #sidebar {
+    #sidebar, #home {
         display: none;
     }
 
     #content {
         width: 100%;
         flex: 1;
+    }
+
+    #contact {
+        display: none
     }
 
     img {
@@ -32,7 +27,11 @@
     }
 
     section {
-        page-break-inside: avoid;
+        /* page-break-inside: avoid; */
         text-align: left;
+    }
+
+    #about, #resume, #facts, #skills {
+        page-break-inside: avoid;
     }
 }
