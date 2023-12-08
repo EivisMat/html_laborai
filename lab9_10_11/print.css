@@ -3,7 +3,7 @@
         font-family: serif;
     }
 
-    #sidebar, #home {
+    #sidebar, #home, #lab11, #about, #facts, #skills, #contact, #print {
         display: none;
     }
 
@@ -12,26 +12,23 @@
         flex: 1;
     }
 
-    #contact {
-        display: none
-    }
-
-    img {
-        display: block;
-        align-self: left;
-    }
-
-    p {
-        text-align: left;
-        margin: 0;
-    }
-
-    section {
-        /* page-break-inside: avoid; */
-        text-align: left;
-    }
-
-    #about, #resume, #facts, #skills {
+    #resume {
         page-break-inside: avoid;
+    }
+
+    #resume-wrapper {
+        grid-template-columns: 100%;
+        grid-template-areas: 'summary' 'education' 'experience';
+        
+    }
+    
+    #resume-wrapper > section {
+        width: 100%;
+        
+    }
+
+    #wrapper {
+        grid-template-columns: 100%;
+        grid-template-areas: 'content content';
     }
 }
